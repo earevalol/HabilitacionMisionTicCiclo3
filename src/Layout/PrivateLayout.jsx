@@ -1,11 +1,15 @@
 import React from "react"
+import PrivateRouter from "../Components/PrivateRouter"
 
-const PublicLayout = ({children}) => {
+const PrivateLayout = ({children}) => {
   return (
-    <div>
-      Este es mi PublicLayout
-    </div>
+      <PrivateRouter>
+        <div>
+          Este es mi private Router
+          {children}
+        </div>
+      </PrivateRouter>
       )
 
 }
-export default PublicLayout
+export default PrivateLayout
